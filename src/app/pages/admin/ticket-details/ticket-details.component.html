@@ -1,0 +1,50 @@
+<mat-grid-list cols="2" rowHeight="2:1" class="fullGrid">
+
+
+    <div class="internalGrid">
+        <mat-grid-list cols="1" rowHeight="fit" class="cardsGrid">
+
+            <mat-grid-tile class="gridTile">
+                <mat-card appearance="outlined" class="card">
+                    <mat-card-content>
+
+                        <p class="p">Content for Card 1</p>
+
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </div>
+
+    <mat-grid-tile class="rightCol">
+        <mat-card appearance="outlined" class="cardDetails">
+            <mat-card-content>
+                <div>
+                    <p class="tripDetails">=== Trip Details ===</p>
+                    <p class="returnTrip">• Return trip •</p>
+                    <hr>
+                    <div class="departSec">
+                        <p class="departDetails">{{departureAirport}} to {{arrivalAirport}}</p>
+                        <p class="departDeate">{{departDate}}</p>
+                    </div>
+                    <hr>
+                    <div class="returnSec">
+                        <p class="returnDetails">{{arrivalAirport}} to {{departureAirport}}</p>
+                        <p class="returnDate">{{arriveDate}}</p>
+                    </div>
+                    <hr>
+                    <div class="grandTotalPart">
+                        <p>Grand Total</p>
+                        <p>${{totalPrice}}</p>
+                    </div>
+                    <div>
+                        <button (click)="confirmTicket()">
+                            <p class="button">Confirm Ticket</p>
+                        </button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

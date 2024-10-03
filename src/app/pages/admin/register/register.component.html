@@ -1,0 +1,30 @@
+<div>
+    <div class="backgroundImage"></div>
+    <mat-card appearance="outlined" class="card">
+        <mat-card-content>
+            <!-- <div class="Img"></div> -->
+            <div>
+                <p class="text">• Register your account •</p>
+                <mat-form-field class="username">
+                    <mat-label>Username <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person" class="person"></mat-icon></mat-label>
+                    <input matInput [(ngModel)]="username">
+                </mat-form-field>
+                <mat-form-field class="contactNumber">
+                    <mat-label>Contact Number <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call" class="call"></mat-icon></mat-label>
+                    <input matInput [(ngModel)]="contactNumber">
+                </mat-form-field>
+                <mat-form-field class="email">
+                    <mat-label>Email <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="mail" class="mail"></mat-icon> </mat-label>
+                    <input matInput [(ngModel)]="email">
+                </mat-form-field>
+                <mat-form-field class="password">
+                    <mat-label>Password <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="key" class="key"></mat-icon></mat-label>
+                    <input matInput [(ngModel)]="password">
+                </mat-form-field>
+                <button class="button button-71" role="button" (click)="login()">REGISTER</button>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+
+</div>

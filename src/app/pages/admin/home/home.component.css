@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.backgroundImage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?cs=srgb&dl=pexels-ahmedmuntasir-912050.jpg&fm=jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.text-center {
+  display: flex;
+  justify-content: start;
+}
+
+.overlayText {
+  color: white;
+  display: flex;
+  justify-content: start;
+}
+
+.h1,
+.h1ii,
+.h2 {
+  margin: 0;
+}
+
+.h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 37%;
+}
+
+.h1ii {
+  font-size: 5rem;
+  font-family: "Playwrite BE VLG", cursive;
+  color: #122d45;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 54%;
+}
+
+.h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  position: absolute;
+  top: 16%;
+  left: 57%;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons1{
+  position: absolute;
+  top: 27%;
+  left: 28%;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: 2px solid #122d45;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: background-color 0.3s ease;
+}
+.buttons2 {
+  position: absolute;
+  top: 27%;
+  left: 46%;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: 2px solid #122d45;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: background-color 0.3s ease;
+}
+.buttons3 {
+  position: absolute;
+  top: 27%;
+  left: 66%;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: 2px solid #122d45;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: background-color 0.3s ease;
+}
+
+.buttons1:hover,
+.buttons2:hover,
+.buttons3:hover {
+  background-color: #122d45;
+}
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 3rem;
+  }
+
+  .h1ii {
+    font-size: 4rem;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  .button-group {
+    bottom: 20%;
+  }
+
+  .buttons1,
+  .buttons2 {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 2rem;
+  }
+
+  .h1ii {
+    font-size: 2.5rem;
+  }
+
+  .h2 {
+    font-size: 1.2rem;
+  }
+
+  .button-group {
+    bottom: 10%;
+  }
+
+  .buttons1,
+  .buttons2 {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

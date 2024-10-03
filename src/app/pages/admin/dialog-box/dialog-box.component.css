@@ -1,0 +1,8 @@
+.dialogBox{
+    font-size: 30px;
+    text-align: center;
+    width:500px;
+    height: 500px;
+    padding-top: 8px;
+    background-color: rgb(88 127 170);
+}

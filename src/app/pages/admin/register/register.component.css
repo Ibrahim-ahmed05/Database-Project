@@ -1,0 +1,132 @@
+.backgroundImage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?cs=srgb&dl=pexels-ahmedmuntasir-912050.jpg&fm=jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.Img {
+    position: absolute;
+    left: 0%;
+    width: 500px;
+    height: 644px;
+    margin-top: -35px;
+    background-image: url(https://i.pinimg.com/originals/23/ea/f3/23eaf367f9411e45f5b8c0375692facb.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.card {
+    height: 450px;
+    /* margin-left: 0px; */
+    padding-left: 0;
+    background-color: rgb(88 127 170);
+    width: 1200px;
+    position: absolute;
+    /* right: 10%; */
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.text {
+    position: absolute;
+    right: 45%;
+    color: #122d45;
+    left: 27%;
+    top: 11%;
+    font-size: 60px;
+    width: 660px;
+}
+
+.username{
+    position: absolute;
+    left: 15%;
+    top: 38%;
+    width: 400px;
+}
+
+.contactNumber{
+    position: absolute;
+    left: 62%;
+    top: 38%;
+    width: 400px;
+}
+
+.email{
+    position: absolute;
+    left: 15%;
+    top: 60%;
+    width: 400px;
+}
+
+.password {
+    position: absolute;
+    left: 62%;
+    top: 60%;
+    width: 400px;
+}
+
+.button{
+    position: absolute;
+    left: 48%;
+    top: 80%; 
+}
+
+
+
+.button-71 {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}

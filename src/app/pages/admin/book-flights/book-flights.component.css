@@ -1,0 +1,116 @@
+.cardTop {
+    margin-top: 50px;
+    background-color: rgb(88 127 170);
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 100px;
+}
+
+.card {
+    margin: 50px 0;
+    height: 130px;
+    background-color: rgb(88 127 170);
+    padding: 20px;
+    width: 923px;
+    max-width: 1000px;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.pageContent {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+.cities {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+.non-stop {
+    margin-top: 15px;
+}
+
+.classCost {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button {
+    height: 80px;
+    width: 400px;
+    max-width: 450px;
+    background-color: rgb(9, 24, 52);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+}
+
+.cost {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.classs {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.grid {
+    margin-top: 50px;
+}
+
+.person {
+    font-size: 14px;
+    position: absolute;
+    top: 42%;
+}
+
+.buttonEdit {
+    height: 15px;
+    font-size: 10px;
+    background: none;
+    border-style: none;
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.citiesInfo {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+.editIcon {
+    font-size: 11px;
+}
+
+.buttonEdit:hover {
+    color: rgb(38, 60, 99);
+}
+
+.backgroundImage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?cs=srgb&dl=pexels-ahmedmuntasir-912050.jpg&fm=jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(8px);
+    -webkit-filter: blur(10px);
+}

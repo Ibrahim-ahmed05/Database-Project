@@ -1,0 +1,109 @@
+<div class="container-fluid p-0">
+    <div class="backgroundImage"></div>
+    <div class="pageContent container d-flex flex-column align-items-center">
+        <mat-card appearance="outlined" class="cardTop">
+            <mat-card-content>
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <var class="citiesInfo">
+                        {{departureAirport}}
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="swap_horiz" class="icon">
+                        </mat-icon>
+                        {{arrivalAirport}}
+                    </var>
+                    <p class="details mb-0">
+                        Return • {{ departDate | date: 'yyyy-MM-dd' }} - {{ arriveDate | date: 'yyyy-MM-dd' }} • {{
+                        numberOfTravellers }}
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person"
+                            class="person"></mat-icon>
+                    </p>
+                    <button class="buttonEdit">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" class="editIcon">
+                        </mat-icon>
+                        Edit Search
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+
+
+        <mat-card appearance="outlined" class="card mx-auto">
+            <mat-card-content class="d-flex flex 100 h-100">
+                <div class="ms-0 me-auto">
+                    <var class="cities">11:40 KARACHI ----------- 21:45 MUNICH</var>
+                    <p class="non-stop">Non-stop 10h 5m</p>
+                </div>
+                <div class="me-0 ms-auto mt-auto mb-auto">
+                    <button class="button" (click)="ticketDetails()">
+                        <div class="classCost">
+                            <p class="classs">{{class}}</p>
+                            <p class="cost">${{price}}</p>
+                        </div>
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card appearance="outlined" class="card mx-auto">
+            <mat-card-content class="d-flex flex 100 h-100">
+                <div class="ms-0 me-auto">
+                    <var class="cities">11:40 KARACHI ----------- 21:45 MUNICH</var>
+                    <p class="non-stop">Non-stop 10h 5m</p>
+                </div>
+                <div class="me-0 ms-auto mt-auto mb-auto">
+                    <button class="button" (click)="ticketDetails()">
+                        <div class="classCost">
+                            <p class="classs">{{class}}</p>
+                            <p class="cost">${{price}}</p>
+                        </div>
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card appearance="outlined" class="card mx-auto">
+            <mat-card-content class="d-flex flex 100 h-100">
+                <div class="ms-0 me-auto">
+                    <var class="cities">13:00 KARACHI ----------- 23:05 MUNICH</var>
+                    <p class="non-stop">Non-stop 10h 5m</p>
+                </div>
+                <div class="me-0 ms-auto mt-auto mb-auto">
+                    <button class="button" (click)="ticketDetails()">
+                        <div class="classCost">
+                            <p class="classs">{{class}}</p>
+                            <p class="cost">${{price}}</p>
+                        </div>
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+
+
+        <div class="row w-100 justify-content-center">
+            <div class="col-md-10">
+                <mat-grid-list cols="1" rowHeight="4:1" class="grid">
+                    <mat-grid-tile *ngFor="let flight of flights">
+                        <mat-card appearance="outlined" class="card mx-auto">
+                            <mat-card-content>
+                                <div>
+                                    <var class="cities">11:40 {{departureAirport}} ----------- 21:45
+                                        {{arrivalAirport}}</var>
+                                    <p class="non-stop">Non-stop 10h 5m</p>
+                                    <button class="button" (click)="ticketDetails()">
+                                        <div class="classCost">
+                                            <p class="classs">{{class}}</p>
+                                            <p class="cost">${{price}}</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+    </div>
+</div>

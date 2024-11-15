@@ -10,16 +10,21 @@ export class HomeComponent {
   title = 'FlightBooking';
   panelOpenState = false;
 
-constructor(private api: API){
-
-}
-
-getStudents(){
-  this.api.getSudent(1).subscribe((res: any)=>{
-    console.log(res)
-  })
-
-  console.log("Working")
-}
-
+  constructor() {
+  }
+// getStudents(){
+//   this.api.getSudent(1).subscribe((res: any)=>{
+//     console.log(res)
+//   })
+//   console.log("Working")
+// }
+// testSupabase() {
+//   this.supabaseService.testConnection().then((response) => {
+//     if (response.error) {
+//       console.error('Supabase Connection Error:', response.error);
+//     } else {
+//       console.log('Supabase Connection Successful:', response.data);
+//     }
+//   });
+// }
 }

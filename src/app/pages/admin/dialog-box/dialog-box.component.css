@@ -1,8 +1,74 @@
-.dialogBox{
-    font-size: 30px;
-    text-align: center;
-    width:500px;
-    height: 500px;
-    padding-top: 8px;
-    background-color: rgb(88 127 170);
+/* General styling for the dialog box */
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.passenger-form {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(88,127,170);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Styling for gender toggle section */
+.gender-section {
+  color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label.label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Button styling */
+.button-div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.save-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 600px) {
+  .dialog-content {
+    padding: 10px;
+  }
+
+  .passenger-form {
+    padding: 10px;
+  }
+
+  .save-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }

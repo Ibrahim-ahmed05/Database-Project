@@ -1,0 +1,94 @@
+/* dialog-box.component.css */
+.priceheading{
+    color:red;
+    text-align: center;
+}
+.dialog-content {
+    padding: 20px;
+    background-color: rgb(240, 248, 255);  /* Light blue background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;  /* Dark text color for readability */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 2em;
+    color: rgb(88, 127, 170);  /* Main theme color */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Styling (Flight and Passenger Details) */
+  .section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+  
+    font-size: 1.5em;
+    color: rgb(88, 127, 170);  /* Main theme color */
+    margin-bottom: 15px;
+  }
+  
+  section p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #555;  /* Subtle text color for the details */
+  }
+  
+  /* Passenger Details Styling */
+  .passenger-details {
+    background-color: #f0f8ff;  /* Light blue background */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid rgb(88, 127, 170);  /* Border with theme color */
+  }
+  
+  .passenger-details h3 {
+    font-size: 1.2em;
+    color: rgb(88, 127, 170);  /* Main theme color */
+  }
+  
+  /* Button Container */
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .confirm-btn {
+    padding: 12px 30px;
+    background-color: rgb(88, 127, 170);  /* Button background in theme color */
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+  }
+  
+  .confirm-btn:hover {
+    background-color: rgb(70, 100, 140);  /* Darker shade on hover */
+  }
+  
+  /* Make sure the page is responsive */
+  @media (max-width: 600px) {
+    .dialog-content {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 1.5em;
+    }
+  
+    .section-title {
+      font-size: 1.3em;
+    }
+  
+    .passenger-details {
+      padding: 10px;
+    }
+  }
+  

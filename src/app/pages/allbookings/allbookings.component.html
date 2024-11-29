@@ -1,0 +1,35 @@
+<div *ngIf="errorMessage" class="error-message">
+  <p>{{ errorMessage }}</p>
+</div>
+
+<div *ngIf="bookings && bookings.length > 0">
+  <h2 class="page-title">Your Bookings</h2>
+  <table class="booking-table">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>Flight Number</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.bookingId }}</td>
+        <td>{{ booking.flight.flightNumber }}</td>
+        <td>{{ booking.flight.source }}</td>
+        <td>{{ booking.flight.destination }}</td>
+        <td>{{ booking.flight.departureTime }}</td>
+        <td>{{ booking.flight.arrivalTime }}</td>
+        <td>${{ booking.totalPrice | number: '1.2-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="bookings && bookings.length === 0 && !errorMessage" class="no-bookings">
+  <p>No bookings found for your account.</p>
+</div>

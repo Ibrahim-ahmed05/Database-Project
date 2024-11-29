@@ -1,0 +1,30 @@
+<div class="payment-container">
+  <h1 class="title">Payment Information</h1>
+  <form (ngSubmit)="onSubmit()">
+    <!-- Form Fields as Before -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Cardholder Name</mat-label>
+      <input matInput name="cardholderName" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Card Number</mat-label>
+      <input matInput name="cardNumber" required maxlength="16">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Expiry Date</mat-label>
+      <input matInput name="expiryDate" placeholder="MM/YY" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>CVV</mat-label>
+      <input matInput name="cvv" required maxlength="4">
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" click="onSubmit()">Confirm Payment</button>
+      <button mat-raised-button color="warn" (click)="cancelPayment()">Cancel</button>
+    </div>
+  </form>
+</div>

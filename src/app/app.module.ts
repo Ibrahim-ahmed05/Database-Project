@@ -22,7 +22,7 @@ import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/materia
 
 // Import the MatNativeDateModule for DateAdapter
 import { MatNativeDateModule } from '@angular/material/core'; // Add this for native Date support
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/admin/home/home.component';
 import { BookFlightsComponent } from './pages/admin/book-flights/book-flights.component';
 import { SearchFlightComponent } from './pages/admin/search-flight/search-flight.component';
@@ -31,7 +31,13 @@ import { RegisterComponent } from './pages/admin/register/register.component';
 import { AboutComponent } from './pages/admin/about/about.component';
 import { TicketDetailsComponent } from './pages/admin/ticket-details/ticket-details.component';
 import { TicketComponent } from './pages/admin/ticket/ticket.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AllFlightsComponent } from './pages/admin/allflights/allflights.component';
+import { MatButtonModule } from '@angular/material/button';
+// Import MatButtonToggleModule for toggle buttons
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { PaymentComponent } from './pages/admin/payment/payment.component';
+import { AllbookingsComponent } from './pages/allbookings/allbookings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +51,13 @@ import { TicketComponent } from './pages/admin/ticket/ticket.component';
     AboutComponent,
     TicketDetailsComponent,
     TicketComponent,
+    AllFlightsComponent,
+    PaymentComponent,
+    AllbookingsComponent,
   ],
   imports: [
+    NoopAnimationsModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -62,7 +73,8 @@ import { TicketComponent } from './pages/admin/ticket/ticket.component';
     MatGridListModule,
     MatDialogModule,
     MatExpansionModule,
-    MatNativeDateModule,  // Add this line to import the native Date adapter
+    MatNativeDateModule,
+    MatButtonToggleModule,  // Add this line to import MatButtonToggleModule
   ],
   providers: [
     provideClientHydration(),

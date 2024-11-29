@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Page Title */
+  .page-title {
+    text-align: center;
+    color: #0066cc;
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    background-color: #ffcccb;
+    color: #d8000c;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  /* No Bookings Message */
+  .no-bookings {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Table Styles */
+  .booking-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Header */
+  .booking-table thead {
+    background-color: #0066cc;
+    color: white;
+  }
+  
+  .booking-table th {
+    padding: 12px 20px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  /* Table Rows */
+  .booking-table tbody tr {
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .booking-table td {
+    padding: 12px 20px;
+    text-align: left;
+    color: #555;
+  }
+  
+  /* Table Row Hover */
+  .booking-table tbody tr:hover {
+    background-color: #f0f8ff;
+  }
+  
+  /* Price Styling */
+  .booking-table td:nth-child(7) {
+    font-weight: bold;
+    color: #0066cc;
+  }
+  
+  /* Responsive Table */
+  @media screen and (max-width: 768px) {
+    .booking-table {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .booking-table th,
+    .booking-table td {
+      padding: 10px;
+    }
+  
+    .page-title {
+      font-size: 24px;
+    }
+  }
+  

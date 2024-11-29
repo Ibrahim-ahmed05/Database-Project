@@ -1,1 +1,36 @@
-<p>ticket works!</p>
+<mat-dialog-content class="dialog-content">
+    <h1 class="title">Booking Summary</h1>
+    
+    <!-- Flight Details Section -->
+    <div class="section">
+      <h2 class="section-title">Flight Details</h2>
+      <p><strong>Flight Number:</strong> {{ selectedFlight.flightNumber }}</p>
+      <p><strong>Flight Name:</strong> {{ selectedFlight.flightName }}</p>
+      <p><strong>From:</strong> {{ selectedFlight.source }}
+        <strong>To:</strong>{{selectedFlight.destination}}
+      <p><strong>Class:</strong> {{ class }}</p>
+      <p><strong>Price per Passenger:</strong> Rs.{{ selectedFlight?.price }}</p>
+      <p><strong>Ticket Type:</strong> {{ choice === 1 ? 'Return' : 'One Way' }}</p>
+
+    </div>
+    
+    <!-- Passenger Details Section -->
+    <div class="section">
+      <h2 class="section-title">Passenger's Details</h2>
+      <div *ngFor="let passenger of passengers; let i = index" class="passenger-details">
+        <h3>Passenger {{ i + 1 }}</h3>
+        <p><strong>Name:</strong> {{ passenger.FirstName }} {{ passenger.LastName }}</p>
+        <p><strong>Gender:</strong> {{ passenger.Gender }}</p>
+        <p><strong>Passport Number:</strong> {{ passenger.PassportNumber }}</p>
+        <p><strong>Contact Number:</strong> {{ passenger.ContactNumber }}</p>
+      </div>
+    </div>
+    <h2 class="priceheading">Total Price: Rs.{{totalPrice}}</h2>
+    <!-- Confirm Booking Button -->
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="confirmBooking()" class="confirm-btn">
+        Confirm Booking
+      </button>
+    </div>
+  </mat-dialog-content>
+  

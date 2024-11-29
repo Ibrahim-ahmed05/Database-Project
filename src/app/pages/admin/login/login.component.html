@@ -1,22 +1,49 @@
 <div>
-    <div class="backgroundImage"></div>
-    <mat-card appearance="outlined" class="card">
-        <mat-card-content>
-            <div class="Img"></div>
-            <div>
-                <p class="text">Login to your account</p>
-                <mat-form-field class="email">
-                    <mat-label>Email</mat-label>
-                    <input matInput [(ngModel)]="email">
-                </mat-form-field>
-                <mat-form-field class="password">
-                    <mat-label>Password</mat-label>
-                    <input matInput [(ngModel)]="password">
-                </mat-form-field>
-                <button class="button button-71" role="button" (click)="home()">LOGIN</button>
-            </div>
+  <div class="backgroundImage"></div>
+  <mat-card appearance="outlined" class="card">
+    <mat-card-content>
+      <div class="Img"></div>
+      <div>
+        <p class="text">Login to your account</p>
 
-        </mat-card-content>
-    </mat-card>
+        <!-- Add the formGroup directive here -->
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <!-- Email Field -->
+          <mat-form-field class="email">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email" placeholder="Enter your email" />
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Please enter a valid email</mat-error>
+          </mat-form-field>
 
+          <!-- Password Field -->
+          <mat-form-field class="password">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" placeholder="Enter your password" />
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+            <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 8 characters</mat-error>
+          </mat-form-field>
+          <p class="text2">
+            Don't have an account?
+            <a routerLink="/register">Register</a>
+          </p>
+
+          <!-- Login Button -->
+          <button class="button button-71" type="submit" role="button" [disabled]="loading || loginForm.invalid">
+            LOGIN
+          </button>
+        </form>
+
+        <!-- Error Message -->
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+
+        <!-- Success Message -->
+        <div *ngIf="successMessage" class="success-message">
+          {{ successMessage }}
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

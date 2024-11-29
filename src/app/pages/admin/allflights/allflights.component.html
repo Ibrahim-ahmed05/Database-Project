@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4 text-dark">All Available Flights</h1>
+    
+    <div class="row flight-cards-container">
+        <div class="col-md-12 mb-4" *ngFor="let flight of flights">
+            <div class="card flight-card shadow-lg border-0 rounded">
+                <div class="card-body text-center">
+                    <!-- Flight Title -->
+                    <h5 class="card-title text-uppercase mb-3">{{ flight.flightName }}</h5>
+                    
+                    <!-- Source and Destination with Arrow -->
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <span class="flight-source text-uppercase">{{ flight.source }}</span>
+                        <i class="fas fa-arrow-right mx-2 text-info"></i> <!-- Arrow icon -->
+                        <span class="flight-destination text-uppercase">{{ flight.destination }}</span>
+                    </div>
+                    
+                    <!-- Flight Departure and Arrival -->
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>
+                            <strong>Departure : </strong> <strong class="text-dark">{{ flight.departureTime | date: 'shortTime' }}</strong>
+                        </div>
+                        <div>
+                            <strong>Arrival : </strong> <strong class="text-dark">{{ flight.arrivalTime | date: 'shortTime' }}</strong>
+                        </div>
+                    </div>
+                    
+                    <!-- Flight Price -->
+                    <div class="mt-2">
+                        <span class="text-danger">Price:</span> RS.{{ flight.price }}
+                    </div>
+
+                    <!-- Flight Ticket Button -->
+                    <!-- <button class="btn btn-primary mt-3" (click)="ticketDetails()">Book Now</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

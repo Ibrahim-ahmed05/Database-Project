@@ -1,63 +1,69 @@
 <div>
-    <div class="backgroundImage"></div>
-    <mat-card appearance="outlined" class="card">
-      <mat-card-content>
-        <div [formGroup]="registerForm">
-          <p class="text">• Register your account •</p>
-  
-          <!-- Username Field -->
-          <mat-form-field class="username">
-            <mat-label>Username</mat-label>
-            <br>
-            <mat-icon aria-hidden="false" fontIcon="person" class="icon-spacing"></mat-icon>
-            <input matInput formControlName="username" placeholder="Enter your username">
-            <mat-error *ngIf="registerForm.get('username')?.hasError('required')">
-              Username is required
-            </mat-error>
-            <mat-error *ngIf="registerForm.get('username')?.hasError('minlength')">
-              Username must be at least 5 characters
-            </mat-error>
-          </mat-form-field>
-  
-          <!-- Email Field -->
-          <mat-form-field class="email">
-            <mat-label>Email</mat-label>
-            <br>
-            <mat-icon aria-hidden="false" fontIcon="mail" class="icon-spacing"></mat-icon>
-            <input matInput formControlName="email" placeholder="Enter your email">
-            <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
-              Email is required
-            </mat-error>
-            <mat-error *ngIf="registerForm.get('email')?.hasError('email')">
-              Please enter a valid email
-            </mat-error>
-            <mat-error *ngIf="registerForm.get('email')?.hasError('minlength')">
-              Email must be at least 5 characters
-            </mat-error>
-          </mat-form-field>
-  
-          <!-- Password Field -->
-          <mat-form-field class="password">
-            <mat-label>Password</mat-label>
-            <br>
-            <mat-icon aria-hidden="false" fontIcon="key" class="icon-spacing"></mat-icon>
-            <input matInput formControlName="password" type="password" placeholder="Enter your password">
-            <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
-              Password is required
-            </mat-error>
-            <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">
-              Password must be at least 8 characters
-            </mat-error>
-          </mat-form-field>
-  
-          <!-- Register Button -->
-          <button 
-            class="button button-71" 
-            role="button" 
-            [disabled]="registerForm.invalid">
-            REGISTER
-          </button>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
+  <div class="backgroundImage"></div>
+  <mat-card appearance="outlined" class="card">
+    <mat-card-content>
+      <!-- The formGroup directive binds the form controls with the form data -->
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <p class="text">• Register your account •</p>
+
+        <!-- Username Field -->
+        <mat-form-field class="username">
+          <mat-label>Username</mat-label>
+          <br>
+          <mat-icon aria-hidden="false" fontIcon="person" class="icon-spacing"></mat-icon>
+          <input matInput formControlName="name" placeholder="Enter your username">
+          <mat-error *ngIf="registerForm.get('name')?.hasError('required')">
+            Username is required
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('name')?.hasError('minlength')">
+            Username must be at least 5 characters
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Email Field -->
+        <mat-form-field class="email">
+          <mat-label>Email</mat-label>
+          <br>
+          <mat-icon aria-hidden="false" fontIcon="mail" class="icon-spacing"></mat-icon>
+          <input matInput formControlName="email" placeholder="Enter your email">
+          <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('email')?.hasError('email')">
+            Please enter a valid email
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('email')?.hasError('minlength')">
+            Email must be at least 5 characters
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Password Field -->
+        <mat-form-field class="password">
+          <mat-label>Password</mat-label>
+          <br>
+          <mat-icon aria-hidden="false" fontIcon="key" class="icon-spacing"></mat-icon>
+          <input matInput formControlName="password" type="password" placeholder="Enter your password">
+          <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+            Password is required
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">
+            Password must be at least 8 characters
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Register Button -->
+        <button
+          type="submit"
+          class="button button-71"
+          role="button"
+          [disabled]="registerForm.invalid || loading">
+          {{ loading ? 'Registering...' : 'REGISTER' }}
+        </button>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+        <!-- Success Message -->
+        <!-- <div *ngIf="successMessage" class="success">{{ successMessage }}</div> -->
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -140,3 +140,16 @@ mat-error {
   color: red;
   margin-top: 10px;
 }
+.success {
+  color: green;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}

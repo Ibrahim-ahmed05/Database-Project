@@ -1,0 +1,44 @@
+.payment-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(88, 127, 170);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    width: 48%;
+  }
+  
+  button.mat-raised-button {
+    font-size: 16px;
+    color: white;
+  }
+  
+  button.mat-raised-button[color="primary"] {
+    background-color: #4caf50;  /* Green for confirm */
+  }
+  
+  button.mat-raised-button[color="warn"] {
+    background-color: #f44336;  /* Red for cancel */
+  }
+  

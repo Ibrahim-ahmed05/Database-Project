@@ -74,8 +74,8 @@ body {
 
 .buttons1{
   position: absolute;
-  top: 27%;
-  left: 28%;
+  top: 32%;
+  left: 48%;
   padding: 0.75rem 2rem;
   border-radius: 50px;
   border: 2px solid #122d45;
@@ -83,13 +83,13 @@ body {
   font-weight: bold;
   cursor: pointer;
   color: white;
-  background: none;
+  background-color: #122d45;
   transition: background-color 0.3s ease;
 }
 .buttons2 {
   position: absolute;
-  top: 27%;
-  left: 46%;
+  top: 32%;
+  left: 65%;
   padding: 0.75rem 2rem;
   border-radius: 50px;
   border: 2px solid #122d45;
@@ -97,7 +97,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   color: white;
-  background: none;
+  background-color: #122d45;
   transition: background-color 0.3s ease;
 }
 .buttons3 {
@@ -118,7 +118,7 @@ body {
 .buttons1:hover,
 .buttons2:hover,
 .buttons3:hover {
-  background-color: #122d45;
+  background: none;
 }
 
 @media (max-width: 768px) {

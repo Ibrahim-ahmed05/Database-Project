@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(88,127,170);  /* Dark background */
+    color: white;
+    justify-content: center;
+}
+
+h1 {
+    color: #4db8ff;  /* Light blue theme for the main heading */
+}
+
+.flight-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the cards in the container */
+}
+
+.flight-card {
+
+    background-color:  rgb(88,127,170);  /* Dark card background */
+    border: 2px solid #4db8ff;  /* Blue border for the flight card */
+    color: white;
+    padding: 15px;
+
+    min-width: 90%;  /* Set the width of the card to 90% of the container */
+    max-width: 600px;  /* Limit the width to a maximum of 600px */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Add a subtle shadow effect */
+    max-height: 300px;  /* Reduce height of the card */
+    overflow: hidden;  /* Hide overflow content to make the card compact */
+}
+
+.flight-card .card-title {
+    font-size: 1.25rem;
+    color: #000000;  /* Blue title */
+}
+
+.flight-card .flight-source, .flight-card .flight-destination {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #080808;  /* Blue color for source/destination */
+}
+
+.flight-card .card-body {
+    background-color: rgb(88,127,170);
+}
+
+.flight-card .text-muted {
+    color: #aaa;
+}
+
+.flight-card .text-info {
+    color: #000000;
+}
+
+.flight-card .text-light {
+    color: #000000;
+}
+
+.flight-card .text-success {
+    color: #28a745;
+}
+
+.flight-card .btn-primary {
+    background-color: #4db8ff;  /* Blue button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flight-card .btn-primary:hover {
+    background-color: #3399cc;  /* Darker blue button on hover */
+}
+
+@media (max-width: 767px) {
+    .flight-cards-container {
+        flex-direction: column;
+    }
+
+    .flight-card {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 95%;  /* Ensure card width is adjusted for mobile */
+    }
+}

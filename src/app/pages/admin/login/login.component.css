@@ -112,3 +112,18 @@
     padding: 16px 48px;
   }
 }
+.register-link{
+  color:red;
+
+}
+.text2 {
+  position: absolute;
+  right: 50%;
+  color: #de0b0b;
+  left: 58%;
+  top: 73%;
+  font-size: 18px;
+  width: 350px;
+  font-weight:bold;
+  /* text-decoration-line: underline; */
+}
